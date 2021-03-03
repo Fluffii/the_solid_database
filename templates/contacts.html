@@ -1,0 +1,33 @@
+{% set active_page = "contacts" %}
+{% extends 'base.html' %}
+
+{% block title %}
+    Наши контакты
+{% endblock %}
+
+{% block content_title %}
+    Наши контакты
+{% endblock %}
+
+{% block content %}
+    <div class="contacts-content">
+        <div class="left">
+            <p><i class="fa fa-map-marker fa-1x" style="color: #2FBA2F" aria-hidden="true" title="Адрес" ></i> Новосибирская область, Новосибирский район, р.п. Краснообск, 630501</p>
+            <p><i class="fa fa-phone fa-1x" style="color: #2FBA2F" aria-hidden="true" title="Телефон"></i> +7 (383) 348-14-40</p>
+            <p><i class="fa fa-fax fa-1x" style="color: #2FBA2F" aria-hidden="true" title="Факс"></i> +7 (383) 348-46-36</p>
+            <p><i class="fa fa-envelope fa-1x" style="color: #2FBA2F" aria-hidden="true" title="e-mail"></i> so.prezidium@yandex.ru</p>
+        </div>
+        <div class="right">
+            <p><i class="fa fa-globe fa-1x" style="color: #2FBA2F" aria-hidden="true" title="Сайт"></i> <a href="https://sfsca.ru" class="paii">sfsca.ru</a></p>
+            <p><i class="fab fa-vk fa-1x" style="color: #2FBA2F" aria-hidden="true" title="Вконтакте"></i> <a href="https://vk.com/sfscaras" class="paii">СФНЦА РАН</a></p>
+            <p><i class="fab fa-instagram fa-1x" style="color: #2FBA2F" aria-hidden="true" title="СФНЦА РАН Instagram"></i> <a href="https://www.instagram.com/sfscaras/" class="paii">sfscaras</a></p>
+            <p><i class="fab fa-youtube fa-1x" style="color: #2FBA2F" aria-hidden="true" title="СФНЦА РАН YouTube"></i> <a href="https://www.youtube.com/channel/UCcu2L7Xl7HWiYKqwC9wGdIQ" class="paii">SFSCA RAS</a></p>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15425.6013259722!2d82.97613910810253!3d54.91995697474638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfdd4b46fb56e9%3A0x28174d00358acc5b!2z0KHQuNCx0LjRgNGB0LrQuNC5INGE0LXQtNC10YDQsNC70YzQvdGL0Lkg0L3QsNGD0YfQvdGL0Lkg0YbQtdC90YLRgCDQsNCz0YDQvtCx0LjQvtGC0LXRhdC90L7Qu9C-0LPQuNC5INCg0JDQnSAo0KHQpNCd0KbQkCDQoNCQ0J0p!5e0!3m2!1sru!2sus!4v1555827126591!5m2!1sru!2sus" width="90%" height="500" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+{% endblock %}

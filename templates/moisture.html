@@ -1,0 +1,35 @@
+{% set active_page = "moisture" %}
+{% extends 'base.html' %}
+
+{% block title %}
+    Продуктивная влага
+{% endblock %}
+
+{% block content_title %}
+    Продуктивная влага
+{% endblock %}
+
+{% block content %}
+    {% include "left_menu.html" %}
+    <div class="table_with_left_menu col-md-9 col-sm-6 col-xs-12 md-mb-30 sm-mb-30">
+        <table class="table table-striped">
+            <thead>
+                <td>Код</td>
+                <td>Критерии</td>
+                <td>Градации</td>
+                <td>Номер типа</td>
+                <td>Описание</td>
+            </thead>
+
+            {%for row in rows %}
+                <tr>
+                    <td>{{ row["Code"] }}</td>
+                    <td>{{ row["Criterion"] }}</td>
+                    <td>{{ row["Gradation"] }}</td>
+                    <td>{{ row["ID_tip"] }}</td>
+                    <td>{{ row["Note"] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

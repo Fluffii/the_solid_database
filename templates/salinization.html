@@ -1,0 +1,41 @@
+{% set active_page = "salinization" %}
+{% extends 'base.html' %}
+
+{% block title %}
+    Засоление почв
+{% endblock %}
+
+{% block content_title %}
+    Засоление почв
+{% endblock %}
+
+{% block content %}
+    {% include "left_menu.html" %}
+    <div class="table_with_left_menu col-md-9 col-sm-6 col-xs-12 md-mb-30 sm-mb-30">
+        <table class="table table-striped">
+            <thead>
+                <td>Код</td>
+                <td>Первый критерий</td>
+                <td>Второй критерий</td>
+                <td>Третий критерий</td>
+                <td>Четвертый критерий</td>
+                <td>Градации</td>
+                <td>Описание</td>
+                <td>Номер типа</td>
+            </thead>
+
+            {%for row in rows %}
+                <tr>
+                    <td>{{ row["Code"]}}</td>
+                    <td>{{ row["Criterion_1"] }}</td>
+                    <td>{{ row["Criterion_2"] }}</td>
+                    <td>{{ row["Criterion_3"] }}</td>
+                    <td>{{ row["Criterion_4"] }}</td>
+                    <td>{{ row["Gradation"] }}</td>
+                    <td>{{ row["Note"] }}</td>
+                    <td>{{ row["ID_tip"] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

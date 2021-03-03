@@ -1,0 +1,47 @@
+{% set active_page = "alltable" %}
+{% extends 'base.html' %}
+
+{% block title %}
+    Почвенная база НСО
+{% endblock %}
+
+{% block content_title %}
+    Почвы Новосибирской Области
+{% endblock %}
+
+{% block content %}
+    <div class="scroll_table">
+        <table class="table table-striped">
+            <thead>
+                <td>Код</td>
+                <td>Индекс типа (подтипа)</td>
+                <td>Название типа (подтипа)</td>
+                <td>Гранулометрический состав</td>
+                <td>Мощность гумусового горизонта, см</td>
+                <td>Содержание гумуса (код)</td>
+                <td>Содержание гумуса, %</td>
+                <td>pH водная (код)</td>
+                <td>pH водная</td>
+                <td>Продуктивная влага в 0-100 см, при HB</td>
+                <td>Продуктивная влага в 0-100 см, при HB, мм</td>
+                <td>Глубина залегания грунтовых вод, м</td>
+            </thead>
+            {%for row in rows %}
+                <tr>
+                    <td>{{ row["ID_tip"] }}</td>
+                    <td>{{ row["Index_tip"] }}</td>
+                    <td>{{ row["Name_Tip_Podtip"] }}</td>
+                    <td>{{ row["granulometry"] }}</td>
+                    <td>{{ row["power"] }}</td>
+                    <td>{{ row["humus_1"] }}</td>
+                    <td>{{ row["humus_2"] }}</td>
+                    <td>{{ row["PH_water1"] }}</td>
+                    <td>{{ row["PH_water2"] }}</td>
+                    <td>{{ row["water_sm"] }}</td>
+                    <td>{{ row["water_mm"] }}</td>
+                    <td>{{ row["ground_water"] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

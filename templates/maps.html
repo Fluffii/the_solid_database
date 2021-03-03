@@ -1,0 +1,27 @@
+{% set active_page = "maps" %}
+{% extends 'base.html' %}
+
+{% block title %}
+    Карта почв Новосибирской области
+{% endblock %}
+
+{% block content_title %}
+    Карта почв Новосибирской области
+{% endblock %}
+
+{% block content %}
+    <p class="pt-2 pb-5 m-0">Почвенная карта Новосибирской области (М1:400000) 1987 г. издания разработана Западно-Сибирским государственным проектным институтом по землеустройству ЗАПСИБГИПРОЗЕМ.</p>
+    <p>Наведите курсор на карту, чтобы увеличить фрагмент.</p>
+    <div class="maps">
+        <a class="demo" href="/static/img/nso.jpg">
+            <img src="/static/img/nso.jpg" style="width: 100%; height: auto;" alt="Карта почв НСО" />
+        </a>
+    </div>
+
+    <script>
+        $('a.demo').loupe({
+            width: 400,
+            height: 300
+        });
+    </script>
+{% endblock %}

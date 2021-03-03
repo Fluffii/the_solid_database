@@ -1,0 +1,105 @@
+{% set active_page = "xozTable" %}
+{% extends 'base.html' %}
+
+{% block title %}
+    Почвенная база данных хозяйств
+{% endblock %}
+
+{% block content_title %}
+    Почвенная база данных хозяйств
+{% endblock %}
+
+{% block content %}
+    <div class="scroll_table">
+        <table class="table table-striped">
+            <thead>
+                <td>Код</td>
+                <td>Код типа</td>
+                <td>ID почвы</td>
+                <td>Подтип</td>
+                <td>Наименование почвы</td>
+                <td>Индексная карта</td>
+                <td>Базовый индекс</td>
+                <td>Место расположения</td>
+                <td>Район</td>
+                <td>Мощность гумусового горизонта</td>
+                <td>Содержание гумуса</td>
+                <td>Глина</td>
+                <td>Кислотность</td>
+                <td>Подвижный фосфор</td>
+                <td>Подвижный калий</td>
+                <td>Структурность</td>
+                <td>Равновесная плотность</td>
+                <td>Код мощности гумусового горизонта</td>
+                <td>Код содержания гумуса</td>
+                <td>Код gran</td>
+                <td>Код кислотности</td>
+                <td>Код подвижного фосфора</td>
+                <td>Код подвижного калия</td>
+                <td>Код структурности</td>
+                <td>Код равновесной плотности</td>
+                <td>Код эрозии</td>
+                <td>Код видов солонцов</td>
+                <td>Код засоления почв</td>
+                <td>Код drain</td>
+                <td>kpower</td>
+                <td>khumus</td>
+                <td>kclay</td>
+                <td>kph</td>
+                <td>kerosion</td>
+                <td>ksolon</td>
+                <td>ksalin</td>
+                <td>kdrain</td>
+                <td>ksoil</td>
+                <td>bonitet</td>
+                <td>PEI</td>
+                <td>Стандартная доходность</td>
+            </thead>
+            {%for row in rows %}
+                <tr>
+                    <td>{{ row["ID"] }}</td>
+                    <td>{{ row["ID_type"] }}</td>
+                    <td>{{ row["ID_soil"] }}</td>
+                    <td>{{ row["podtype"] }}</td>
+                    <td>{{ row["name_soil"] }}</td>
+                    <td>{{ row["index_map"] }}</td>
+                    <td>{{ row["index_base"] }}</td>
+                    <td>{{ row["location"] }}</td>
+                    <td>{{ row["raion"] }}</td>
+                    <td>{{ row["power"] }}</td>
+                    <td>{{ row["humus"] }}</td>
+                    <td>{{ row["clay"] }}</td>
+                    <td>{{ row["pH"] }}</td>
+                    <td>{{ row["phoshorus"] }}</td>
+                    <td>{{ row["potassium"] }}</td>
+                    <td>{{ row["aggregates"] }}</td>
+                    <td>{{ row["bulkweight"] }}</td>
+                    <td>{{ row["code_power"] }}</td>
+                    <td>{{ row["code_humus"] }}</td>
+                    <td>{{ row["code_gran"] }}</td>
+                    <td>{{ row["code_ph"] }}</td>
+                    <td>{{ row["code_phoshorus"] }}</td>
+                    <td>{{ row["code_potassium"] }}</td>
+                    <td>{{ row["code_aggregates"] }}</td>
+                    <td>{{ row["code_bulkweight"] }}</td>
+                    <td>{{ row["code_erosia"] }}</td>
+                    <td>{{ row["code_solonetzes"] }}</td>
+                    <td>{{ row["code_salinisation"] }}</td>
+                    <td>{{ row["code_drain"] }}</td>
+                    <td>{{ row["kpower"] }}</td>
+                    <td>{{ row["khumus"] }}</td>
+                    <td>{{ row["kclay"] }}</td>
+                    <td>{{ row["kph"] }}</td>
+                    <td>{{ row["kerosion"] }}</td>
+                    <td>{{ row["ksolon"] }}</td>
+                    <td>{{ row["ksalin"] }}</td>
+                    <td>{{ row["kdrain"] }}</td>
+                    <td>{{ row["ksoil"] }}</td>
+                    <td>{{ row["bonitet"] }}</td>
+                    <td>{{ row["PEI"] }}</td>
+                    <td>{{ row["standard_yield"] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
